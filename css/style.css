@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Oswald;
+}
+
+.page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+header {
+    background-color: #2C2C2C;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+
+}
+
+.header_block {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 60%;
+    align-self: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header a {
+    text-decoration: none;
+    color: #A6AFAF;
+    font-family: "Source Code Pro", sans-serif;
+
+}
+
+header li {
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 15px;
+    padding-left: 15px;
+
+
+}
+
+header li:not(:first-child) {
+    border-left: 1px dashed #a6afbd;
+}
+
+header input {
+    background-color: #373737;
+    border: 0;
+    height: 48px;
+    outline: none;
+    width: 771px;
+
+}
+
+.search_box {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width: 771px;
+    height: 48px;
+    position: relative;
+}
+
+.search_box input {
+    background-color: #373737;
+    color: white;
+    border: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.search_box input::placeholder {
+    color: #A6AFBD;
+    padding: 15px;
+}
+
+.search_box .search-icon {
+    position: absolute;
+    right: 24px;
+    height: 20px;
+    z-index: 2;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1F1F1F;
+    height: 108px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: .05em;
+    padding-left: 15px;
+}
+
+.logo {
+    height: 36px;
+}
+
+.get {
+    padding: 20px 28px;
+    background-color: #ff3633;
+    transition: background-color .2s ease;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    border-style: none;
+}
+
+.get:hover {
+    background-color: #AE1E23;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 108px;
+    width: 63%;
+}
+
+.log_management {
+    display: flex;
+    flex-direction: column;
+    background-color: #1F1F1F;
+    align-items: center;
+
+}
+
+.log_management h1 {
+    font: 60px Oswald, sans-serif;
+    color: #FFFFFF;
+    margin-top: 70px;
+}
+
+.management_people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(180deg, rgba(31, 31, 31, .88), rgba(31, 31, 31, .88)),
+    url('https://assets-global.website-files.com/5b24f53ad227e552a41baaaa/5cf18140c27be654c5698401_graylog-pattern.svg');
+    width: 100%;
+}
+
+.do_more {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://assets-global.website-files.com/5b24f53ad227e552a41baaaa/5bdf223388110a6611ab97e0_Home%20Tabs%20Background.jpg);
+    background-position: 50% 100%;
+}
+
+.security {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.security h3 {
+    color: #ff3633;
+    font-size: 20px;
+    margin: 18px 0;
+}
+
+.security h2 {
+    color: white;
+    font-size: 20px;
+    margin: 24px 0 16px;
+
+}
+
+.security p {
+    color: #a6afbd;
+    font: 16px "Source Code Pro";
+    margin: 0 0 24px;
+}
+
+.security button {
+    padding: 20px 28px;
+    border: 2px solid #ff3633;
+    background-color: transparent;
+    transition: background-color .2s ease;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    width: 204px;
+    height: 64px;
+}
+
+.security button:hover {
+    background-color: #FF3633;
+}
+
+.do_more_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.management img {
+    margin: 15px 0 25px;
+    width: 100px;
+}
+
+.add_info {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+
+
+}
+
+.add_info_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 12px;
+
+}
+
+.add_info_card img {
+    width: 178px;
+    height:120px;
+}
+
+.add_info_card h3 {
+
+
+}
+
+.add_info_card h2 {
+    margin: 20px 0 10px;
+}
+.add_info_card p {
+    margin: 0 0 48px;
+}
+
+
+.users {
+    display: flex;
+}
