@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Oswald;
+    font-family: Oswald, sans-serif;
 }
 
 .page {
@@ -9,74 +9,43 @@
     flex: 1;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: center;
 }
 
-header {
+.header {
     background-color: #2C2C2C;
-    width: 100%;
-    align-self: center;
-    display: flex;
-    justify-content: center;
     height: 48px;
-
 }
 
-.header_block {
+.header_container, .nav_container {
+    max-width: 1152px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header_container {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    align-items: center;
-    list-style: none;
-    width: 60%;
-    align-self: center;
+    justify-content: center;
+    align-items: stretch;
+    height: 48px;
 }
 
-header ul {
+.header_container ul {
     list-style: none;
     display: flex;
-}
-
-header a {
-    text-decoration: none;
-    color: #A6AFAF;
-    font-family: "Source Code Pro", sans-serif;
-
-}
-
-header li {
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 15px;
-    padding-left: 15px;
-
-
-}
-
-header li:not(:first-child) {
-    border-left: 1px dashed #a6afbd;
-}
-
-header input {
-    background-color: #373737;
-    border: 0;
-    height: 48px;
-    outline: none;
-    width: 771px;
-
+    align-items: center;
 }
 
 .search_box {
     display: flex;
     flex: 1;
     align-items: center;
-    width: 771px;
-    height: 48px;
     position: relative;
+
+    margin: 0;
+    height: 48px;
 }
 
 .search_box input {
@@ -84,13 +53,15 @@ header input {
     color: white;
     border: 0;
     outline: none;
+    font-family: "Source Sans Pro", sans-serif;
+
     width: 100%;
     height: 100%;
+    padding: 0 24px;
 }
 
 .search_box input::placeholder {
     color: #A6AFBD;
-    padding: 15px;
 }
 
 .search_box .search-icon {
@@ -100,34 +71,78 @@ header input {
     z-index: 2;
 }
 
+header input {
+    background-color: #373737;
+    border: 0;
+    height: 48px;
+    outline: none;
+}
+
+
+.header_container li a {
+    display: flex;
+    align-items: center;
+
+    margin-left: 15px;
+    padding-left: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    border-left: 1px dashed #a6afbd;
+    color: #a6afbd;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header_container li:first-child a {
+    margin-left: 0;
+    border-left-style: none;
+}
 
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #1F1F1F;
     height: 108px;
+    background-color: #1F1F1F;
     width: 100%;
 }
 
-nav ul {
+.nav_container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_container ul {
     display: flex;
     align-items: center;
     list-style: none;
+    align-self: center;
 }
 
-nav a {
-    text-decoration: none;
+.nav_container a, .nav_container button {
     color: white;
+    text-decoration: none;
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
     font-size: 20px;
-    letter-spacing: .05em;
+    letter-spacing: 1px;
+    line-height: 20px;
+
     padding-left: 15px;
+    padding-right: 15px;
 }
 
-.logo {
+.nav_container .logo {
     height: 36px;
 }
 
-.get {
+.nav_container .get {
     padding: 20px 28px;
     background-color: #ff3633;
     transition: background-color .2s ease;
@@ -139,16 +154,8 @@ nav a {
     border-style: none;
 }
 
-.get:hover {
+.nav_container .get:hover {
     background-color: #AE1E23;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 108px;
-    width: 63%;
 }
 
 .log_management {
@@ -156,7 +163,6 @@ nav a {
     flex-direction: column;
     background-color: #1F1F1F;
     align-items: center;
-
 }
 
 .log_management h1 {
@@ -199,7 +205,6 @@ nav a {
     color: white;
     font-size: 20px;
     margin: 24px 0 16px;
-
 }
 
 .security p {
@@ -236,8 +241,6 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 .management img {
@@ -249,36 +252,32 @@ nav a {
     display: flex;
     flex-direction: row;
     align-content: space-between;
-
-
 }
 
 .add_info_card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 12px;
-
 }
 
 .add_info_card img {
     width: 178px;
-    height:120px;
+    height: 120px;
 }
 
 .add_info_card h3 {
-
 
 }
 
 .add_info_card h2 {
     margin: 20px 0 10px;
 }
+
 .add_info_card p {
     margin: 0 0 48px;
 }
-
 
 .users {
     display: flex;
